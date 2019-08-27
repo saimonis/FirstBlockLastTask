@@ -18,3 +18,23 @@
 	display: table;
 	clear: both;
 }
+.search--active ~*{
+	display: none;
+}
+.menu__link--active::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	display: block;
+	width: 4px;
+	height: 32px;
+	background-color: #41F6D7;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	transform:translateY(-50%);
+}
+.menu__link--active{
+	color: #7E7E82;
+
+}

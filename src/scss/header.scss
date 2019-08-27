@@ -1,0 +1,151 @@
+.menu-close{
+	background-image: url(../img/symbols/menu-close.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.search{
+	display: flex;
+	flex-grow:1;
+	justify-content:flex-end;
+	align-items:center;
+	position: relative;
+	padding: 0;
+
+}
+.search__content{
+	flex-grow:1;
+}
+.search__content--active{
+	display: flex;
+}
+.search__field{
+	align-self:stretch;
+	flex-grow:1;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-right-color: transparent;
+	margin-right: -20px;
+	border: 1px solid $lightgray;
+	padding: 8px 50px 8px 16px;
+}
+.search__cross{
+	position: absolute;
+	top: 50%;
+	right: 55px;
+	transform:translateY(-50%);
+	width: 10px;
+	height: 10px;
+	background-image: url(../img/symbols/cross.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.search__button{
+	background-image: url(../img/symbols/search.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+
+
+}
+.menu{
+	margin: 0 auto;
+	max-width: 360px;
+	min-width: 320px;
+	min-height: 768px;
+}
+.menu__outside{
+	display: flex;
+	align-items: center;
+	padding: 18px var(--p16);
+	min-height: 88px;
+}
+.menu__search{
+	order: 1;
+	margin-left: auto;
+}
+.menu__menu-close{
+	margin-right: 16px;
+}
+.menu__list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+}
+.menu__link{
+	display: block;
+	padding: 0 var(--p16);
+	text-decoration: none;
+	color: $black;
+	line-height: 24px;
+	margin-bottom: 24px;
+	position: relative;
+
+}
+.contacts{
+	padding: 0 var(--p16);
+	margin-bottom: 8px;
+}
+.contacts__top{
+	display: flex;
+	margin-bottom: 16px;
+}
+.contacts__element{
+	margin-right: 16px;
+}
+.contacts__element--call{
+		background-image: url(../img/symbols/phone.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.contacts__element--message{
+		background-image: url(../img/symbols/message.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.contacts__element--persona{
+		background-image: url(../img/symbols/persona.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.contacts__mail,
+.contacts__phone{
+	color: $black;
+	text-decoration: none;
+	
+}
+.contacts__contact{
+	margin-bottom: 12px;
+}
+.contacts__phone{
+	margin-top: 12px;
+	font-size: 24px;
+	font-weight: bold;
+}
+.menu__langs{
+	padding-left: var(--p16);
+	margin-bottom: 32px;
+}
+.menu__lang{
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	color: $black;
+	font-size: 16px;
+
+}
+
+.menu__lang--active{
+	color: $ligntblack;
+}
+// 
+// 
+// 
+// 
+// 
+//  КОНЕЦ ДЛЯ МЕНЮ, СЛЕДОМ БУДЕТ ПАНЕЛЬ НАВИГАЦИИ В HEADER
+// 
+// 
+// 
+// 
+// 
+// 
