@@ -1,5 +1,5 @@
 import '../scss/style.scss';
-import './main.js';
-import './swiper.min.js';
+import './jquery.min.js';
+
 
 console.log('Works!');

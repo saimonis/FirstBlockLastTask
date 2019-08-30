@@ -33,6 +33,7 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "jquery": "^3.4.1",
     "normalize.scss": "^0.1.0"
   }
 }
