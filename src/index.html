@@ -7,25 +7,23 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title><%= htmlWebpackPlugin.options.title %></title>
 	<link rel="stylesheet" href="style.css"> 
+
 </head>
-<body>
-	<style type="text/css">
-		.menu{
-			display: none;
-		}
-	</style>
-	<header class="header">
+<body class="body">
+	<div class="body__center">
+		<header class="body__header header">
 		<div class="container">
+			<div class="shadow"></div>
 			<nav class="menu">
 				<div class="menu__outside">
 					<form class="menu__search search" name="search">
-						<div class="search__content g-display-none">
+						<div class="search__content">
 							<input id="search" class="search__field" type="search" name="search-field">
 							<span class="search__cross" for="search-field"></span>
 						</div>
-						<button class="search__button g-btn" type="submit"></button>
+						<button class="search__button g-btn" type="submit" aria-label="Найти"></button>
 					</form>
-					<button class="menu__menu-close menu-close g-btn"></button>
+					<button class="menu__menu-close menu-close g-btn" aria-label="Закрыть меню"></button>
 					<img class="logo" src="./img/logo.png"></img>
 				</div>
 				<!-- ./menu__outside -->
@@ -54,37 +52,118 @@
 				</div>
 				<!-- /.contacts -->
 				<div class="menu__langs">
-					<button class="menu__lang menu__lang--active ">RU</button>
-					<button class="menu__lang">EN</button>
-					<button class="menu__lang">CH</button>
+					<button class="menu__lang menu__lang--active" aria-label="Переключить язык на русский">RU</button>
+					<button class="menu__lang" aria-label="Change language to English">EN</button>
+					<button class="menu__lang" aria-label="Change language to English" >CH</button>
 				</div>
 			</nav>
 			<nav class="nav">
-				<div class="nav__panel">
-					<button class="g-btn nav__btn hamburger">
-						<span class="visually-hidden">Кнопка меню</span>
-					</button>
-					<span class="nav__line nav__line--first"></span>
-					<img class = "logo" src="img/logo.png" alt="Логотип">
 
-					<div class="nav__links">
-						<a href="#" class="btn nav__btn"><img class="nav__img nav__img--transition" src="./img/symbols/phone.svg" alt="Логотип"></a>
-						<a href="#"  class="btn nav__btn"><img class="nav__img" src="./img/symbols/message.svg" alt="Логотип"></a>
-						<a href="#"  class="btn nav__btn"><img class="nav__img" src="./img/symbols/persona.svg" alt="Логотип"></a>
+				<button class="nav__btn nav__btn--hamburger g-btn" aria-label="Открыть меню"></button>
+				<span class="g-line g-line--first"></span>
+				<img class = "nav__logo logo" src="img/logo.png" alt="Логотип">
 
-					</div>
-					<span class="nav__line"></span>
-					<button class="btn nav__btn nav__btn--last"><img class="nav__img"  src="./img/symbols/repair.svg" alt="Оставить заявку"></button>
-					<button class="btn nav__btn nav__btn--last"><img class="nav__img"  src="./img/symbols/find.svg" alt="Статус ремонта"></button>
+				<div class="nav__contacts">
+					<a href="#" class="contacts__element contacts__element--call g-btn"></a>
+					<a href="#"  class="contacts__element contacts__element--message g-btn"></a>
+					<a href="#"  class="contacts__element contacts__element--persona g-btn"></a>
 				</div>
-				<!-- /.nav__panel -->
+				<span class="g-line g-line--second"></span>
+				<button class="nav__btn nav__btn--repair nav__btn--mr g-btn"></button>
+				<button class="nav__btn nav__btn--find g-btn"></button>
+
 			</nav>
 		</div>
-		<!-- /.container -->
+		<!-- /.header__container /.container -->
 	</header>
-	<main class="main"></main>
-	<footer class="footer"></footer>
-	<script type="text/javascript">
+	<main class="body__main main">
+		<div class="container">
+			<section class="services">
+				<h1 class="main__title title">Услуги и сервисы</h1>
+
+				<!-- ./services__top -->
+				<div class="services__fade">
+					<ul class="services__list">
+						<li class="services__el"><a href="#" class="services__link services__link--active">Ремонтируемые бренды</a></li>
+						<li class="services__el"><a href="#" class="services__link">Ремонтируемые устройства</a></li>
+						<li class="services__el"><a href="#" class="services__link">Цены на услуги</a></li>
+						<li class="services__el"><a href="#" class="services__link">Адреса сервисных центров</a></li>
+						<li class="services__el"><a href="#" class="services__link">Специальные цены</a></li>
+						<li class="services__el"><a href="#" class="services__link">Отзывы</a></li>
+					</ul>
+				</div>
+				
+				<article class="about-us">
+					<div class="about-us__container">	
+						<img class = "about-us__img" src="img/corporation.jpg" alt="Логотип компании" width="532" height="307">
+					</div>
+					
+					<div class="about-us__container-text">
+						<p class="about-us__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+						<p class="about-us__text">
+						Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+
+						<!-- <div class="clearfix"></div> -->
+						<a class="about-us__more">Читать далее</a>
+					</div>
+					<!-- /.about-us__container-text -->
+
+
+				</article>	
+			</section>
+			<!-- ./services -->
+			<section class="brands">
+				<h2 class="brands__title">Ремонт техники различных брендов</h2>
+				<div class="brands__logos">
+					<div class="">
+						<!-- /.swiper-wrapper -->
+						<div class="brands__logo">
+							<img src="img/logos/lenovo.jpg"> <a href="#" class="brands__link"></a>
+						</div>
+						<div class="brands__logo">
+							<img src="img/logos/samsung.jpg"> <a href="#" class="brands__link"></a>
+						</div>
+						<div class="brands__logo">
+							<img src="img/logos/apple.jpg"> <a href="#" class="brands__link"></a>
+						</div>
+						<div class="brands__logo">
+							<img src="img/logos/viewSonic.jpg"> <a href="#" class="brands__link"></a>
+						</div>
+	<!-- 				<div class="brands__logo">
+						<img src="img/logos/bosh.jpg"> <a href="#" class="brands__link"></a>
+					</div>
+					<div class="brands__logo brands__logo--hp">
+						<img src="img/logos/hp.jpg"> <a href="#" class="brands__link"></a>
+					</div>
+					<div class="brands__logo">
+						<img src="img/logos/acer.jpg"> <a href="#" class="brands__link"></a>
+					</div>
+					<div class="brands__logo">
+						<img src="img/logos/sony.jpg"> <a href="#" class="brands__link"></a>
+					</div>
+					<div class="brands__logo">
+						<img src="img/logos/acer.jpg"> <a href="#" class="brands__link"></a>
+					</div> -->
+				</div>
+				<!-- Add Pagination -->
+				<!-- <div class="swiper-pagination"></div> -->
+			</div>
+
+		</section>
+		<!-- /.brands -->
+	</div>
+
+</main>
+	</div>
+	<!-- /.body__center -->
+
+	
+<footer class="footer"></footer>
+
+
+<script type="text/javascript" src="./js/bundle.js"></script>
+ 
+<script type="text/javascript">
 		// начало реализации поиска
 		const searchCross = document.querySelector('.search__cross');
 		const search = document.forms.search;
@@ -99,8 +178,20 @@
 			event.preventDefault();
 			
 		})
+		// реализовали работу появления инпута поиска
+		// Открытие и закрытие меню
+		const shadow = document.querySelector('.shadow');
+		const menu = document.querySelector('.menu');
+		const menuClose = menu.querySelector('.menu-close');
+		menuClose.addEventListener('click',()=>{
+			menu.classList.remove('menu--active');
+			shadow.style="display:none"})
+		const hamburger = document.querySelector('.nav__btn--hamburger');
+		hamburger.addEventListener('click',()=>{
+			menu.classList.add('menu--active');
+			shadow.style="display:block"})
 
+		</script>
 
-	</script>
-</body>
-</html>
+	</body>
+	</html> 

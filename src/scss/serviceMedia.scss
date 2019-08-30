@@ -1,0 +1,32 @@
+@media (min-width: 768px){
+	.about-us__container{
+		order:1;
+		max-height: 100%;	
+
+	}
+	.about-us__img{
+		border-radius: 6px;
+	}
+	.about-us{
+		flex-direction: row;
+
+	}
+	.about-us__text ~ .about-us__text{
+		display: block;
+	}
+	.about-us__text{
+		margin: 0;
+		padding-top: var(--p16);
+		vertical-align: text-top;
+		// text-overflow: ellipsis;
+		// white-space: nowrap;
+		// max-height: 170px;
+		// overflow: hidden;
+	}
+	.about-us__container-text{
+		margin-right: 48px;
+		width: 50%;
+		
+		margin-bottom: 10px;
+	}
+}

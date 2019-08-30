@@ -31,5 +31,8 @@
     "start": "webpack-dev-server --mode development --open",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "normalize.scss": "^0.1.0"
   }
 }

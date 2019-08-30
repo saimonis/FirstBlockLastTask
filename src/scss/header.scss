@@ -14,6 +14,7 @@
 }
 .search__content{
 	flex-grow:1;
+	display: none;
 }
 .search__content--active{
 	display: flex;
@@ -47,10 +48,17 @@
 
 }
 .menu{
-	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	left: 0;
 	max-width: 360px;
 	min-width: 320px;
 	min-height: 768px;
+	display: none;
+	background-color: #fff;
+	z-index: 10;
+
+
 }
 .menu__outside{
 	display: flex;
@@ -87,23 +95,25 @@
 }
 .contacts__top{
 	display: flex;
-	margin-bottom: 16px;
 }
 .contacts__element{
 	margin-right: 16px;
 }
+.contacts__element:last-of-type{
+	margin-right: 0;
+}
 .contacts__element--call{
-		background-image: url(../img/symbols/phone.svg);
+	background-image: url(../img/symbols/phone.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 }
 .contacts__element--message{
-		background-image: url(../img/symbols/message.svg);
+	background-image: url(../img/symbols/message.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 }
 .contacts__element--persona{
-		background-image: url(../img/symbols/persona.svg);
+	background-image: url(../img/symbols/persona.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -115,6 +125,7 @@
 }
 .contacts__contact{
 	margin-bottom: 12px;
+	margin-top: 16px;
 }
 .contacts__phone{
 	margin-top: 12px;
@@ -137,6 +148,8 @@
 .menu__lang--active{
 	color: $ligntblack;
 }
+
+
 // 
 // 
 // 
@@ -149,3 +162,37 @@
 // 
 // 
 // 
+.g-line--second{
+	margin-right: 17px;
+}
+
+.nav{
+
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 88px;
+	padding: 24px var(--nav16);
+}
+.nav__btn--hamburger{
+	background-image: url(../img/symbols/burger.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.nav__btn--repair{
+	background-image: url(../img/symbols/repair.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.nav__btn--find{
+	background-image: url(../img/symbols/find.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.g-line--first{
+	display: none;
+}
+.nav__contacts{
+	position: absolute;
+}

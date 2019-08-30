@@ -1,7 +1,84 @@
 @media (min-width: 360px){
 	:root {
-  --p16: 24px;
+		--p16: 24px;
+	}
+	.container{
+		max-width: 768px;
+	}
+	.g-line--second{
+		margin-left: auto;
+	}
+	.nav__btn--mr{
+		margin-right: 17px;
+	}
+	.nav__logo{
+		margin-right: 17px;
+		margin-left: 17px;
+	}
+	.menu{
+		max-width: 320px;
+		position: absolute;
+		background-color: #fff;
+		z-index: 10;
+		box-shadow: 0 0 15px 0 lightgray; 
+	}
 }
+@media (min-width: 768px){
+			:root {
+		--nav16: 24px;
+	}
+	.nav__logo {
+		margin-left: 0;
+	}
+	.container{
+		max-width: 1440px;
+	}
 
-
+	.nav__contacts{
+		position: static;
+		display: flex;
+		margin-left: auto;
+	}
+	.g-line--first{
+		display: block;
+	}
+	
+	.g-line{
+		margin-right: 17px;
+		margin-left: 17px;
+	}
+}
+@media (min-width: 1440px){
+		:root {
+		--nav16: 32px;
+	}
+	.nav{
+		display: none;
+	}
+	.menu{
+		display: block;
+		position: static;
+		box-shadow: none; 
+	}
+	.body__header{
+		display: inline-block;
+		width: 320px;
+		vertical-align: top;
+		margin-left: -0.25em;
+		
+	}
+	.body__main{
+		display: inline-block;
+		width: 1120px;	
+		vertical-align: top;
+		margin-left: -0.25em;
+		
+	}
+	.menu__menu-close{
+		display: none;
+	}
+	.menu__search {
+		justify-content: flex-start;
+		margin-left: 25px;
+	}
 }
