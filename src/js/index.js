@@ -1,5 +1,6 @@
 import '../scss/style.scss';
-import './jquery.min.js';
+import from './jquery.min.js';
+import './main.js';
 
 
-console.log('Works!');
+console.log('Works!'); 
